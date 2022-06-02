@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Update User{% endblock title %}
+
+
+{% block content %}
+<h1>Update User Information</h1>
+<form method="PUT" action="{{ url_for('user_update') }}">
+    <p>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name">
+    </p>
+    <p>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name">
+    </p>
+    <p>
+        <label for="hobbies">Hobbies:</label>
+        <textarea name="hobbies" id="hobbies" cols="30" rows="10"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Create" class="btn btn-success">
+    </p>
+</form>
+{% endblock content %}
